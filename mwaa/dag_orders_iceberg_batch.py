@@ -42,10 +42,10 @@ dag = DAG(
     catchup=False,
     user_defined_macros={'local_dt': lambda execution_date: execution_date.in_timezone(local_tz).strftime("%Y-%m-%d %H:%M:%S")},
 )
-
+##############################################################
 S3_URI = "s3://ken-datalake/emr/src/"
 EMR_CLUSTER_ID = 'j-8G0P9GVGUYGM'
-
+####################################################################
 SPARK_STEPS = [
   {
       'Name': 'setup - copy files',
